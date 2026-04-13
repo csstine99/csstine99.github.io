@@ -4,6 +4,10 @@ body{
     text-align: center;
 }
 
+.navbar {
+    overflow: hidden;
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
