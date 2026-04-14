@@ -2,9 +2,10 @@ body{
     font-family: Arial, sans-serif;
 }
 
-/*header {
+header {
     float: left;
-}*/
+    background-color: turquoise;
+}
 
 nav {
     overflow: hidden;
