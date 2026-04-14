@@ -2,13 +2,9 @@ body{
     font-family: Arial, sans-serif;
 }
 
-header {
+/*header {
     float: left;
-}
-
-nav {
-    float: right;
-}
+}*/
 
 .navbar {
     overflow: hidden;
