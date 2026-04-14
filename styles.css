@@ -1,7 +1,4 @@
 body{
-    margin: 0;
-    background: pink;
-    text-align: center;
     font-family: Arial, sans-serif;
 }
 
@@ -50,7 +47,7 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: turquoise;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
