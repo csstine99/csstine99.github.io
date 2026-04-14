@@ -5,12 +5,15 @@
 
 body{
     font-family: Arial, sans-serif;
+    background-color: lightcyan;
 }
 
 header {
+    align-content: center;
     width: 100vw;
     background-color: turquoise;
-    padding: 14px 16px;
+    margin: 16px;
+    border-radius: 5px;
 }
 
 nav {
