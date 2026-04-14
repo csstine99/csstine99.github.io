@@ -6,12 +6,12 @@ body{
     float: left;
 }*/
 
-.navbar {
+nav {
     overflow: hidden;
     background-color: turquoise;
 }
 
-.navbar a {
+nav a {
     float: right;
     font-size: 16px;
     color: black;
@@ -36,7 +36,7 @@ body{
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover, .dropbtn {
+nav a:hover, .dropdown:hover, .dropbtn {
     background-color: teal;
 }
 
