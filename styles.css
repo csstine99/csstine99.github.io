@@ -14,13 +14,13 @@ header {
     background-color: turquoise;
     margin: 16px;
     border-radius: 5px;
-    display: inline;
+    display: inline-block;
 }
 
 nav {
     overflow: hidden;
     background-color: turquoise;
-    display: inline;
+    display: inline-block;
 }
 
 nav a {
