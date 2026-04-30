@@ -20,6 +20,7 @@ header {
 nav {
     overflow: hidden;
     background-color: turquoise;
+    display: inline;
 }
 
 nav a {
