@@ -14,7 +14,7 @@ header {
     background-color: turquoise;
     margin: 0px 16px;
     border-radius: 5px;
-    display: inline;
+    /*display: inline;*/
 }
 
 nav {
