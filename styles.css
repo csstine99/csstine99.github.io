@@ -20,7 +20,7 @@ header {
 nav {
     overflow: hidden;
     background-color: turquoise;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 nav a {
@@ -28,7 +28,7 @@ nav a {
     font-size: 16px;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    /*padding: 14px 16px;*/
     text-decoration: none;
     border-radius: 5px;
 }
