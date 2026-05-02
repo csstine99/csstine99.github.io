@@ -12,7 +12,7 @@ header {
     align-content: center;
     width: 100%;
     background-color: turquoise;
-    margin: 16px;
+    margin: 0px 16px;
     border-radius: 5px;
     display: inline-block;
 }
@@ -20,7 +20,7 @@ header {
 nav {
     overflow: hidden;
     background-color: turquoise;
-    /*display: inline-block;*/
+    display: inline;
 }
 
 nav a {
