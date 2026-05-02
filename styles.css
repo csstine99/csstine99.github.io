@@ -28,7 +28,7 @@ nav a {
     font-size: 16px;
     color: black;
     text-align: center;
-    /*padding: 14px 16px;*/
+    padding: 14px 16px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -44,7 +44,7 @@ nav a {
     border: none;
     outline: none;
     color: turquoise;
-    padding: 14px 16px;
+    /*padding: 14px 16px;*/
     background-color: inherit;
     font-family: inherit;
     margin: 0;
