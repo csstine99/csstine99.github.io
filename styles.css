@@ -8,11 +8,15 @@ body{
     background-color: lightcyan;
 }
 
+header h1{
+    margin: 0;
+}
+
 header {
     align-content: center;
     width: 100%;
     background-color: turquoise;
-    margin: 0px 16px;
+    padding: 0px 16px;
     border-radius: 5px;
     /*display: inline;*/
 }
@@ -20,7 +24,9 @@ header {
 nav {
     overflow: hidden;
     background-color: turquoise;
-    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav a {
