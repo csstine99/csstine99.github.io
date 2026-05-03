@@ -25,8 +25,8 @@ nav {
     overflow: hidden;
     background-color: turquoise;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /*align-items: center;
+    justify-content: space-between;*/
 }
 
 nav a {
