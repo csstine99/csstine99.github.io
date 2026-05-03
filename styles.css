@@ -30,7 +30,7 @@ nav {
 }
 
 nav a {
-    float: right;
+    /*float: right;*/
     font-size: 16px;
     color: black;
     text-align: center;
@@ -40,7 +40,7 @@ nav a {
 }
 
 .dropdown {
-    float: right;
+    /*float: right;*/
     overflow: hidden;
     border-radius: 5px;
 }
