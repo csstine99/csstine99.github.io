@@ -38,6 +38,7 @@ nav a {
     color: black;
     text-align: center;
     height: 100%;
+    padding: 0 16px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -49,11 +50,13 @@ nav a {
 }
 
 .dropdown .dropbtn {
+    display: flex;
     font-size: 16px;
     border: none;
     outline: none;
     color: turquoise;
     height: 100%;
+    padding: 0 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
