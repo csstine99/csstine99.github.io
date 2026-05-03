@@ -29,7 +29,7 @@ nav {
     overflow: hidden;
     background-color: turquoise;
     display: flex;
-    align-items: center;
+    align-items: stretch;
 }
 
 nav a {
