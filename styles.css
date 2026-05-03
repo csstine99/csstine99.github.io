@@ -18,7 +18,7 @@ header {
     align-content: center;
     width: 100%;
     background-color: turquoise;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
