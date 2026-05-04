@@ -104,6 +104,12 @@ nav a:hover, .dropdown:hover .dropbtn {
     padding: 20px;
 }
 
+.projects h1{
+    text-align: center;
+    padding: 20px;
+    gap: 0;
+}
+
 .tile {
     display: flex;
     align-items: stretch;
