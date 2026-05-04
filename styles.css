@@ -106,7 +106,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .projects h1{
     text-align: center;
-    padding: 20px;
+    padding: 0;
     gap: 0;
 }
 
