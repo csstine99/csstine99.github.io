@@ -180,6 +180,11 @@ nav a:hover, .dropdown:hover .dropbtn {
     transform: translateY(0);
 }
 
+.tile:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
 @media (max-width: 900px) {
     .projects {
         grid-template-rows: repeat(2, 1fr);
