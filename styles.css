@@ -157,7 +157,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     transition: all 0.3s ease;
 }
 
-.title:hover .expanded{
+.tile:hover .expanded{
     opacity: 1;
     transform: translateY(0);
 }
