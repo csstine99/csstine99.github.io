@@ -116,6 +116,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     margin: 0 auto;
     min-height: 180px;
     transition: transform 0.3s ease, box-shadow 0,3s ease;
+    text-decoration: none;
 }
 
 .tile img {
