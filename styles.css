@@ -182,7 +182,6 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .tile:nth-child(even) {
     flex-direction: row-reverse;
-    text-align: right;
 }
 
 @media (max-width: 900px) {
