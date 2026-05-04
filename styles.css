@@ -157,7 +157,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 .tile:hover {
     transform: scale(1.04);
     box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-    background: #e0ffff;
+    background: white;
 }
 
 .description {
