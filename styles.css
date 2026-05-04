@@ -132,6 +132,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+    flex-shrink: 0;
 }
 
 .tile:hover img {
@@ -143,6 +144,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
 }
 
 .tile h2 {
@@ -173,6 +175,12 @@ nav a:hover, .dropdown:hover .dropbtn {
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .tile:hover .expanded{
