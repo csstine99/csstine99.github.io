@@ -158,6 +158,15 @@ nav a:hover, .dropdown:hover .dropbtn {
     background: #f8ffff;
 }
 
+.description {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.tile:hover .description{
+    opacity: .5;
+}
+
 .expanded {
     opacity: 0;
     transform: translateY(10px);
