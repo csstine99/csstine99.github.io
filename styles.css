@@ -195,6 +195,17 @@ nav a:hover, .dropdown:hover .dropbtn {
     flex-direction: row-reverse;
 }
 
+.project-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.page-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
 @media (max-width: 900px) {
     .projects {
         grid-template-rows: repeat(2, 1fr);
