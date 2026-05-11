@@ -206,6 +206,28 @@ nav a:hover, .dropdown:hover .dropbtn {
     margin-bottom: 60px;
 }
 
+.page-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.page-hero p {
+    font-size: 48px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.project-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 80px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
 @media (max-width: 900px) {
     .projects {
         grid-template-rows: repeat(2, 1fr);
