@@ -228,6 +228,34 @@ nav a:hover, .dropdown:hover .dropbtn {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
+.project-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-img img {
+    width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h2 {
+    margin-bottom: 20px;
+}
+
+.project-content p, .project-content li {
+    line-height: 1.6;
+}
+
+.project-content ul {
+    margin: 15px 0px 15px 20px;
+}
+
+
+
 @media (max-width: 900px) {
     .projects {
         grid-template-rows: repeat(2, 1fr);
