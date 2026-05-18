@@ -6,6 +6,53 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<script>
+    const cards = document.querySelectorAll('.project-card');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+
+    let current = 0;
+
+    function updateCarousel() {
+        cards.forEach(card => {
+            card.classList.remove('active', 'left', 'right', 'hidden');
+        });
+
+        const total = cards.length;
+        const left = (current - 1 + total)%total;
+        const right = (current + 1)%total;
+
+        cards[current].classList.add('active');
+        cards[left].classList.add('left');
+        cards[right].classList.add('right');
+
+        cards.forEach((card, index) => {
+            if (index !== current && index !== left && index !== right) {
+                card.classList.add('hidden');
+            }
+        });
+    }
+
+    nextBtn.addEventListener('click', () => {
+        current = (current + 1)%cards.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        current = (current - 1 + cards.length)%cards.length;
+        updateCarousel();
+    });
+
+    cards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            current = index;
+            updateCarousel();
+        });
+    });
+
+    updateCarousel();
+</script>
+
 <body>
     <header>
         <h1>Cory Stine</h1>
