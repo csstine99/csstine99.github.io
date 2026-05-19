@@ -289,7 +289,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .project-card.left {
-    transform: translate(-125%, -45%) rotateY(18deg) scale(0.72);
+    transform: translate(-120%, -45%) rotateY(18deg) scale(0.72);
     opacity: 0.35;
     z-index: 2;
     filter: blur(2px);
@@ -297,7 +297,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .project-card.right {
-    transform: translate(25%, -45%) rotateY(-18deg) scale(0.72);
+    transform: translate(20%, -45%) rotateY(-18deg) scale(0.72);
     opacity: 0.35;
     z-index: 2;
     filter: blur(2px);
