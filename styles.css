@@ -262,7 +262,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .project-card img {
     width: 380px;
-    height: 3000px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
