@@ -214,7 +214,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 .page-hero p {
     font-size: 48px;
     margin: auto;
-    line-height: 1.6;
+    /*line-height: 1.6;*/
 }
 
 .carousel-section {
