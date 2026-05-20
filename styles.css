@@ -249,7 +249,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
     display: flex;
     align-items: center;
-    gap: 40px;
+    /*gap: 40px;*/
 
     padding: 40px;
 
