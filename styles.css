@@ -260,14 +260,6 @@ nav a:hover, .dropdown:hover .dropbtn {
     cursor: pointer;
 }
 
-.project-card img {
-    width: 380px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    align-items: center;
-}
-
 .project-info {
     flex: 1;
 }
@@ -286,6 +278,14 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .project-info p {
     line-height: 1.6;
+}
+
+.project-info img {
+    width: 380px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    align-items: center;
 }
 
 .project-card.active {
