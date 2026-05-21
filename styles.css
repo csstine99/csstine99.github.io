@@ -260,12 +260,15 @@ nav a:hover, .dropdown:hover .dropbtn {
     cursor: pointer;
 
     overflow: hidden;
+
+    isolation: isolate;
 }
 
 .project-date {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 10;
 
     background: teal;
     color: white;
@@ -278,7 +281,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
     letter-spacing: 0.5px;
 
-    box-shadow: 0 4px 10ox rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .project-info {
