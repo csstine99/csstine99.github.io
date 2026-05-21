@@ -237,7 +237,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .project-card {
     position: absolute;
-    top: 50%;
+    top: 40px;
     left: 50%;
 
     width: 950px;
@@ -313,7 +313,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .project-card.active {
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%) scale(1);
     opacity: 1;
     z-index: 3;
     filter: blur(0);
@@ -322,7 +322,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .project-card.left {
-    transform: translate(-120%, -45%) rotateY(18deg) scale(0.72);
+    transform: translate(-120%) rotateY(18deg) scale(0.72);
     opacity: 0.35;
     z-index: 2;
     filter: blur(2px);
@@ -330,7 +330,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .project-card.right {
-    transform: translate(20%, -45%) rotateY(-18deg) scale(0.72);
+    transform: translate(20%) rotateY(-18deg) scale(0.72);
     opacity: 0.35;
     z-index: 2;
     filter: blur(2px);
