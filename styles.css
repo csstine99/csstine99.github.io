@@ -8,6 +8,7 @@ body{
     font-family: Arial, sans-serif;
     background-color: lightcyan;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 header h1{
@@ -225,6 +226,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 80px;
 }
 
 .carousel {
@@ -233,13 +235,13 @@ nav a:hover, .dropdown:hover .dropbtn {
     height: 100%;
     perspective: 1200px;
     transform-style: preserve-3d;
-    border-bottom: 40px;
 }
 
 .project-card {
     position: absolute;
     top: 40px;
     left: 50%;
+    transform: translateX(-50%);
 
     width: 950px;
     max-width: 90%;
@@ -260,8 +262,6 @@ nav a:hover, .dropdown:hover .dropbtn {
     transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
 
     cursor: pointer;
-
-    overflow-y: auto;
 
     isolation: isolate;
 }
