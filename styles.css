@@ -273,6 +273,12 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .project-info h2 {
     margin-bottom: 15px;
+    text-align: center;
+}
+
+.project-info h4 {
+    text-align: center;
+    line-height: 1.6;
 }
 
 .project-info p {
