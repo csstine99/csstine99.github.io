@@ -265,6 +265,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+    align-items: center;
 }
 
 .project-info {
@@ -274,10 +275,12 @@ nav a:hover, .dropdown:hover .dropbtn {
 .project-info h2 {
     margin-bottom: 15px;
     text-align: center;
+    align-items: center;
 }
 
 .project-info h4 {
     text-align: center;
+    align-items: center;
     line-height: 1.6;
 }
 
