@@ -270,6 +270,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     top: 20px;
     right: 20px;
     z-index: 10;
+    text-align: right;
 
     background: teal;
     color: white;
