@@ -395,7 +395,6 @@ nav a:hover, .dropdown:hover .dropbtn {
     min-width: 70px;
     text-align: center;
     position: relative;
-    transition: transform 0.2s ease;
 }
 
 .tool-item img {
@@ -403,6 +402,9 @@ nav a:hover, .dropdown:hover .dropbtn {
     height: 48px;
     object-fit: contain;
     margin-bottom: 6px;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 
 .tool-item span {
@@ -412,7 +414,9 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .tool-item:hover {
-    transform: translateY(-4px);    
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);    
 }
 
 .tool-item:not(:last-child)::after {
