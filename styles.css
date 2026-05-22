@@ -369,7 +369,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     font-size: 17px;
 }
 
-.content-row > img {
+.content-row > img, .content-row > video {
     width: 40%;
     min-width: 320px;
     max-width: 420px;
