@@ -342,17 +342,14 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .content-row {
-    scroll-snap-align: start;
     display: flex;
     align-items: center;
     gap: 40px;
     margin-bottom: 60px;
-    min-height: 70vh;
     padding: 40px 0;
 }
 
 .content-row.reverse {
-    scroll-snap-align: start;
     flex-direction: row-reverse;
 }
 
@@ -419,10 +416,6 @@ nav a:hover, .dropdown:hover .dropbtn {
 .project-card.left:hover, .project-card.right:hover {
     opacity: 0.6;
     pointer-events: auto;
-}
-
-.project-card.active, .project-info {
-    scroll-snap-type: y proximity;
 }
 
 .carousel-btn {
