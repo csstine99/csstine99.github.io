@@ -9,8 +9,6 @@ body{
     background-color: lightcyan;
     overflow-x: hidden;
     overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
 }
 
 header h1{
@@ -349,6 +347,8 @@ nav a:hover, .dropdown:hover .dropbtn {
     align-items: center;
     gap: 40px;
     margin-bottom: 60px;
+    min-height: 70vh;
+    padding: 40px 0;
 }
 
 .content-row.reverse {
@@ -421,9 +421,15 @@ nav a:hover, .dropdown:hover .dropbtn {
     pointer-events: auto;
 }
 
+.project-card.active, .project-info {
+    scroll-snap-type: y proximity;
+}
+
 .carousel-btn {
-    position: sticky;
-    z-index: 10;
+    position: fixed;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 1100;
 
     width: 50px;
     height: 50px;
