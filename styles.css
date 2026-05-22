@@ -223,12 +223,10 @@ nav a:hover, .dropdown:hover .dropbtn {
 .carousel-section {
     position: relative;
     width: 100%;
-    height: auto;
-    min-height: 950vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
 }
 
 .carousel {
