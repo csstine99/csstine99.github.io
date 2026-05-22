@@ -365,6 +365,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .text-block p {
+    text-align: justify;
     line-height: 1.8;
     font-size: 17px;
 }
