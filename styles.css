@@ -353,13 +353,14 @@ nav a:hover, .dropdown:hover .dropbtn {
     flex-direction: row-reverse;
 }
 
-.text-block {
-    flex: 1;
-}
-
-.text-block h3 {
+.content-row h3 {
+    width: 100%;
     text-align: center;
     margin-bottom: 15px;
+}
+
+.text-block {
+    flex: 1;
 }
 
 .text-block p {
