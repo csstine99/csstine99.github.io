@@ -413,7 +413,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     line-height: 1.2;
 }
 
-.tool-item:hover img{
+.tools .tool-item:hover img{
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.08);    
