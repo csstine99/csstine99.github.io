@@ -422,7 +422,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .carousel-btn {
-    position: absolute;
+    position: sticky;
     z-index: 10;
 
     width: 50px;
@@ -441,7 +441,6 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .carousel-btn:hover {
-    position: sticky;
     background: darkcyan;
 }
 
