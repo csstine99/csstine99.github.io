@@ -228,7 +228,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 180px;
+    padding-bottom: 80px;
 }
 
 .carousel {
@@ -237,6 +237,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     min-height: 1000px;
     overflow: visible;
     perspective: 1200px;
+    margin-bottom: 80px;
 }
 
 .project-card {
