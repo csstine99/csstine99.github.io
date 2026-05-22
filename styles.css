@@ -370,7 +370,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     font-size: 17px;
 }
 
-.content-row img {
+.content-row > img {
     width: 40%;
     min-width: 320px;
     max-width: 420px;
@@ -394,6 +394,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     align-items: center;
     min-width: 70px;
     text-align: center;
+    position: relative;
     transition: transform 0.2s ease;
 }
 
@@ -410,14 +411,18 @@ nav a:hover, .dropdown:hover .dropbtn {
     line-height: 1.2;
 }
 
-.tool-divider {
+.tool-item:hover {
+    transform: translateY(-4px);    
+}
+
+.tool-item:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: -12px;
+    top: 20px;
     font-size: 22px;
     color: teal;
     font-weight: bold;
-}
-
-.tool-item:hover {
-    transform: translateY(-4px);    
 }
 
 .project-card.active {
