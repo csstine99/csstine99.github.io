@@ -386,7 +386,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     min-width: 320px;
     max-width: 420px;
     height: 320px;
-    background: linear-gradient(to bottom, #535353, #eaeaea);
+    background: linear-gradient(to bottom, #535353, #d3d3d3);
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
