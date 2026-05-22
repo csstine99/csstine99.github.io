@@ -373,9 +373,11 @@ nav a:hover, .dropdown:hover .dropbtn {
     width: 40%;
     min-width: 320px;
     max-width: 420px;
-    height: 320px;
+    height: 320px !important;
     border-radius: 12px;
+    display: block;
     object-fit: cover;
+    overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
