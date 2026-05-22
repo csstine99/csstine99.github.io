@@ -240,7 +240,6 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .project-card {
-    scroll-snap-align: start;
     position: absolute;
     top: 0;
     left: 50%;
