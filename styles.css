@@ -347,7 +347,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .content-row {
-    flex: 1;
+    display: flex;
     align-items: center;
     gap: 40px;
     margin-bottom: 60px;
@@ -359,7 +359,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .text-block {
-    display: flex;
+    flex: 1;
     align-items: center;
     gap: 40px;
 }
