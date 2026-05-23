@@ -58,7 +58,7 @@
                         <div class="content-row">
                             <div class="text-block">
                                 <p>
-                                    <strong>Shell Weapon Type:</strong> A shell spinner was chosen mainly for its balance of offense and defense. 
+                                    <strong>Shell Weapon Type:</strong> We chose a shell spinner mainly for its balance of offense and defense. 
                                     It allows for 360-degree weapon coverage which protects the robot from any angle, 
                                     while the comparatively large mass delivers strong kinetic energy transfer. 
                                     Additionally the spinning shell provides gyroscopic stabilization, 
@@ -74,7 +74,7 @@
                                 <p>
                                     <strong>Shuffler Drive System:</strong> The V1 design utilized two wheel drive with skids for stabilization, 
                                     but during competition we encountered substantial issues with floor inconsistencies impacting the skid performance. 
-                                    For V2 we solved this issue by replacing the wheels with shuffler drive modules. 
+                                    For V2 we solved this by replacing the wheels with shuffler drive modules. 
                                     This removes the need for skids as each shuffler module has at least two points of contact with the ground 
                                     and there is an added benefit of a 1.5x weight bonus for "non-traditional locomotion".
                                 </p>
@@ -100,10 +100,28 @@
                         <div class="content-row">
                             <div class="text-block">
                                 <p>
-                                    Description
+                                    <strong>Shuffler Module Design:</strong> Building a shuffler module is much more difficult 
+                                    than just mating a motor shaft to a wheel hub. We needed to design a cam shaft to convert the rotational motion 
+                                    from the motor into an oscillating walking motion while taking into account the desired speed and torque requirements. 
+                                    In the end, we decided on 4 feet for the combination of stability, smooth shuffling, and weight. 
+                                    We were also able to come up with a clever cam disc which could be used in all 4 positions to greatly simplify assembly.
                                 </p>
                             </div>
-                            <img src="images/bissan_bersa/Placeholder.jpg" alt="">
+                            <model-viewer
+                                src="models/bissan_bersa/drive_cam.gltf"
+                                alt="Cam Shaft CAD Model"
+                                orientation="180deg 90deg 0deg"
+                                auto-rotate
+                                auto-rotate-delay="0"
+                                rotation-per-second="20deg"
+                                camera-orbit="45deg 45deg 2.2m"
+                                camera-controls
+                                shadow-intensity="0.3"
+                                exposure="1.4"
+                                environment-image="neutral"
+                                interaction-prompt="none"
+                                class="cad-viewer">
+                            </model-viewer>
                         </div>
                         <div class="content-row reverse">
                             <div class="text-block">
