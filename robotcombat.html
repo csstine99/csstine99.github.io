@@ -320,7 +320,7 @@
         function scrollToActiveCard() {
             const carouselTop = document.querySelector('.carousel-section').getBoundingClientRect().top + window.pageYOffset;
 
-            window.scrollTo({top: carouselTop-40, behavior: 'smooth'});
+            window.scrollTo({top: carouselTop+40, behavior: 'smooth'});
         }
 
         nextBtn.addEventListener('click', () => {
