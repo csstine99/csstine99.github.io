@@ -317,35 +317,31 @@
             });
         }
 
+        function scrollToActiveCard() {
+            const headerOffset = 300;
+
+            const cardTop = cards[current].getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+            window.scrollTo({top: cardTop, behavior: 'smooth'});
+        }
+
         nextBtn.addEventListener('click', () => {
             current = (current + 1)%cards.length;
             updateCarousel();
-
-            cards[current].scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            scrollToActiveCard();
         });
 
         prevBtn.addEventListener('click', () => {
             current = (current - 1 + cards.length)%cards.length;
             updateCarousel();
-
-            cards[current].scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            scrollToActiveCard();
         });
 
         cards.forEach((card, index) => {
             card.addEventListener('click', () => {
                 current = index;
                 updateCarousel();
-
-                cards[current].scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                scrollToActiveCard();
             });
         });
 
