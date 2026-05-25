@@ -143,7 +143,8 @@
                                     <strong>Shell Power Transmission:</strong> 
                                 </p>
                             </div>
-                            <img src="images/bissan_bersa/section-view-labeled.png">
+                            <img src="images/bissan_bersa/section-view-labeled.png" alt=""
+                                 style="object-fit: contain; background: #f4f4f4;">
                         </div>
 
                         <h3>Tools and Skills</h3>
@@ -320,7 +321,7 @@
         function scrollToActiveCard() {
             const carouselTop = document.querySelector('.carousel-section').getBoundingClientRect().top + window.pageYOffset;
 
-            window.scrollTo({top: carouselTop+40, behavior: 'smooth'});
+            window.scrollTo({top: carouselTop-80, behavior: 'smooth'});
         }
 
         nextBtn.addEventListener('click', () => {

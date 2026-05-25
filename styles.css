@@ -243,8 +243,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     top: 0;
     left: 50%;
 
-    width: 950px;
-    max-width: 90%;
+    width: min(1300px,92vw);
 
     background: white;
     border-radius: 16px;
@@ -349,7 +348,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 .content-row {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     margin-bottom: 60px;
     padding: 0;
 }
@@ -377,7 +376,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     height: 320px !important;
     border-radius: 12px;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
