@@ -334,6 +334,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .project-info {
     flex: 1;
+    width: 100%;
 }
 
 .project-info h3 {
@@ -482,6 +483,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 .project-card.left:hover, .project-card.right:hover {
     opacity: 0.6;
     pointer-events: auto;
+    cursor: pointer;
 }
 
 .carousel-btn {

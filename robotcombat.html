@@ -143,7 +143,7 @@
                                     <strong>Driving the Shell:</strong>
                                 </p>
                             </div>
-                            <img src="images/bissan_bersa/section-view.png">
+                            <img src="images/bissan_bersa/section-view-labeled.png">
                         </div>
 
                         <h3>Tools and Skills</h3>
@@ -320,17 +320,32 @@
         nextBtn.addEventListener('click', () => {
             current = (current + 1)%cards.length;
             updateCarousel();
+
+            cards[current].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         });
 
         prevBtn.addEventListener('click', () => {
             current = (current - 1 + cards.length)%cards.length;
             updateCarousel();
+
+            cards[current].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         });
 
         cards.forEach((card, index) => {
             card.addEventListener('click', () => {
                 current = index;
                 updateCarousel();
+
+                cards[current].scrollIntoView({
+                    behavior: 'smooth';
+                    block: 'start'
+                });
             });
         });
 
