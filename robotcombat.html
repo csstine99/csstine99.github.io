@@ -140,7 +140,7 @@
                         <div class="content-row">
                             <div class="text-block">
                                 <p>
-                                    <strong>Driving the Shell:</strong>
+                                    <strong>Shell Power Transmission:</strong> 
                                 </p>
                             </div>
                             <img src="images/bissan_bersa/section-view-labeled.png">
@@ -318,11 +318,9 @@
         }
 
         function scrollToActiveCard() {
-            const headerOffset = 300;
+            const carouselTop = document.querySelector('.carousel-section').getBoundingClientRect().top + window.pageYOffset;
 
-            const cardTop = cards[current].getBoundingClientRect().top + window.pageYOffset - headerOffset;
-
-            window.scrollTo({top: cardTop, behavior: 'smooth'});
+            window.scrollTo({top: carouselTop-40, behavior: 'smooth'});
         }
 
         nextBtn.addEventListener('click', () => {
