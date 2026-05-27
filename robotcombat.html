@@ -392,7 +392,7 @@
                 viewers.forEach(viewer => {
                     if(index==current) {
                         if(!viewer.src) {
-                            viewer.src = viwer.dataset.src;
+                            viewer.src = viewer.dataset.src;
                         }
                     } else {
                         viewer.removeAttribute('src');
@@ -400,7 +400,7 @@
                 });
             });
 
-            cards[current].querySelectorAll('video').forEach(video => {video.play();});
+            cards[current].querySelectorAll('video').forEach(video => {video.play().catch(() => {});});
         }
 
         function scrollToActiveCard() {
@@ -434,10 +434,10 @@
         document.querySelectorAll('img').forEach(img => {img.loading="lazy"})
         document.querySelectorAll('video').forEach(video => {
             video.preload ='metadata';
-            video.autoplay;
-            video.playsInline;
-            video.loop;
-            video.muted;
+            video.autoplay = true;
+            video.playsInline = true;
+            video.loop = true;
+            video.muted = true;
         })
     </script>
 </body>
