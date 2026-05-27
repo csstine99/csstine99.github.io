@@ -394,7 +394,13 @@
                         if(!viewer.src) {
                             viewer.src = viewer.dataset.src;
                         }
+
+                        viewer.autoRotate = 'true';
+                        viewer.style.visibility = 'visible';
+
                     } else {
+                        viewer.autoRotate = 'false';
+                        viewer.style.visibility = 'hidden';
                         viewer.removeAttribute('src');
                     }
                 });
