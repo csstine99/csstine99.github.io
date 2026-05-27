@@ -30,7 +30,6 @@
     </header> 
     
     <main class="project-page">
-
         <section class="page-hero">
             <h1>Combat Robotics</h1>
             <p>
@@ -65,7 +64,7 @@
                                     reducing the risk of flipping when taking hits from other robots.
                                 </p>
                             </div>
-                            <video autoplay muted loop playsinline>
+                            <video>
                                 <source src="videos/bissan_bersa/motorama-rumble.mp4" type="video/mp4" alt="Bissan Bersa at Motorama">
                             </video>
                         </div>
@@ -79,7 +78,7 @@
                                     and there is an added benefit of a 1.5x weight bonus for "non-traditional locomotion".
                                 </p>
                             </div>
-                             <video autoplay muted loop playsinline>
+                             <video>
                                 <source src="videos/bissan_bersa/shuffler-test.mp4" type="video/mp4" alt="Shuffler module testbed">
                             </video>
                         </div>
@@ -96,7 +95,7 @@
                                 </p>
                             </div>
                             <model-viewer
-                                src="models/bissan_bersa/shuffler_module.gltf"
+                                data-src="models/bissan_bersa/shuffler_module.gltf"
                                 alt="Shuffler Module CAD Model"
                                 orientation="180deg 90deg 0deg"
                                 auto-rotate
@@ -125,7 +124,7 @@
                                     and weld on pieces of square tubing to act as teeth for improved energy transfer.
                                 </p>
                             </div>
-                            <video autoplay muted loop playsinline>
+                            <video>
                                 <source src="videos/bissan_bersa/full-robot-shuffle.mp4" type="video/mp4" alt="Bissan Bersa moving with shell">
                             </video>
                         </div>
@@ -211,13 +210,65 @@
 
 
                         <h3>Engineering Challenges</h3>
-                        <p>
-                            Description
-                        </p>
-                        <h3>Tools Used</h3>
-                        <p>
-
-                        </p>
+                        <div class="content-row">
+                            <div class="text-block">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                            <model-viewer
+                                data-src="models/bissan_bersa/shuffler_module.gltf"
+                                alt="Shuffler Module CAD Model"
+                                orientation="180deg 90deg 0deg"
+                                auto-rotate
+                                auto-rotate-delay="0"
+                                rotation-per-second="20deg"
+                                camera-orbit="45deg 45deg 2.2m"
+                                camera-controls
+                                shadow-intensity="0.3"
+                                exposure="1.4"
+                                environment-image="neutral"
+                                interaction-prompt="none"
+                                class="cad-viewer">
+                            </model-viewer>
+                        </div>
+                        <div class="content-row reverse">
+                            <div class="text-block">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                            <video>
+                                <source src="videos/bissan_bersa/full-robot-shuffle.mp4" type="video/mp4" alt="Bissan Bersa moving with shell">
+                            </video>
+                        </div>
+                        <h3>Tools and Skills</h3>
+                        <div class="tools">
+                            <div class="tool-item">
+                                <img src="images/tool_icons/inventor.png" alt="Autodesk Inventor logo">
+                                <span>AUTODESK INVENTOR</span>
+                            </div>
+                            <div class="tool-item">
+                                <img src="images/tool_icons/motor.png" alt="Brushless DC motor">
+                                <span>ELECTRO-MECHANICAL<Br>DESIGN</span>
+                            </div>
+                            <div class="tool-item">
+                                <img src="images/tool_icons/shaft.png" alt="Cam shaft">
+                                <span>SHAFT DESIGN</span>
+                            </div>
+                            <div class="tool-item">
+                                <img src="images/tool_icons/dfma.png" alt="DFMA venn diagram">
+                                <span>DFMA</span>
+                            </div>
+                            <div class="tool-item">
+                                <img src="images/tool_icons/power-tools.png" alt="Drill">
+                                <span>POWER TOOLS</span>
+                            </div>
+                            <div class="tool-item">
+                                <img src="images/tool_icons/mill.png" alt="Milling machine">
+                                <span>MACHINE TOOLS</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -319,6 +370,8 @@
         function updateCarousel() {
             cards.forEach(card => {
                 card.classList.remove('active', 'left', 'right', 'hidden');
+
+                card.querySelectorAll('video').forEach(video => {video.pause();});
             });
 
             const total = cards.length;
@@ -333,7 +386,21 @@
                 if (index !== current && index !== left && index !== right) {
                     card.classList.add('hidden');
                 }
+
+                const viewers = card.querySelectorAll('model-viewer');
+
+                viewers.forEach(viewer => {
+                    if(index==current) {
+                        if(!viewer.src) {
+                            viewer.src = viwer.dataset.src;
+                        }
+                    } else {
+                        viewer.removeAttribute('src');
+                    }
+                });
             });
+
+            cards[current].querySelectorAll('video').forEach(video => {video.play();});
         }
 
         function scrollToActiveCard() {
@@ -363,6 +430,15 @@
         });*/
 
         updateCarousel();
+
+        document.querySelectorAll('img').forEach(img => {img.loading="lazy"})
+        document.querySelectorAll('video').forEach(video => {
+            video.preload ='metadata';
+            video.autoplay;
+            video.playsInline;
+            video.loop;
+            video.muted;
+        })
     </script>
 </body>
 </html>
