@@ -29,7 +29,10 @@
         <h1 class = "projects-title">Some Text Here</h1>
         <div class="projects">
             <a href="robotcombat" class="tile" id="robotcombat-tile">
-                <img id="robotcombat-image" src="images/robot_combat/bissan_bersa/shell-removed-rotated.png">
+                <div class="tile-image-container">
+                    <img class="tile-image-active" src="images/robot_combat/bissan_bersa/shell-removed-rotated.png" alt="Robot combat hero image slideshow">
+                    <img class="tile-image">
+                </div>
                 <div class="tile-text">
                     <h2>Combat Robotics</h2>
                     <p class="description">Description of combat robotics here</p>
@@ -44,7 +47,10 @@
             </a>
 
             <a href="robotarm" class="tile" id="robotarm-tile">
-                <img id="robotarm-image" src="images/robot_arm/position/hero.png">
+                <div class="tile-image-container">
+                    <img class="tile-image-active" src="images/robot_arm/position/hero.png" alt="Robot arm hero image slideshow">
+                    <img class="tile-image">
+                </div>
                 <div class="tile-text">
                     <h2>Robotic Arms</h2>
                     <p class="description">Description of robotic arms here</p>
@@ -59,7 +65,10 @@
             </a>
 
             <a href="design" class="tile" id="design-tile">
-                <img id="design-image" src="images/design/nix/model.png">
+                <div class="tile-image-container">
+                    <img class="tile-image-active" src="images/design/nix/model.png" alt="Design hero image slideshow">
+                    <img class="tile-image">
+                </div>
                 <div class="tile-text">
                     <h2>Product Design</h2>
                     <p class="description">Description of product design here</p>
@@ -74,7 +83,10 @@
             </a>
 
             <a href="automation" class="tile" id="automation-tile">
-                <img id="automation-image" src="images/automation/printer.png">
+                <div class="tile-image-container">
+                    <img class="tile-image-active" src="images/automation/printer.png" alt="Automation hero image slideshow">
+                    <img class="tile-image">
+                </div>
                 <div class="tile-text">
                     <h2>Factory Automation</h2>
                     <p class="description">Description of factory automation</p>
@@ -92,7 +104,7 @@
     </main>
 
     <script>
-        const categoryImgaes = {
+        const categoryImages = {
             robotcombat: [
                 "images/robot_combat/bissan_bersa/shell-removed-rotated.png",
                 "images/robot_combat/cassowari/cassowari.png",
@@ -119,10 +131,12 @@
             ]
         }
 
-        function setupTileSlideshow(tileId, imageId, images) {
+        function setupTileSlideshow(tileId, images) {
             const tile = document.getElementById(tileId);
-            const img = document.getElementById(imageId);
+            const imageElements = tile.querySelectorAll(".tile-image");
 
+            let front = imageElements[0];
+            let back = imageElements[1];
             let index = 0;
             let slideshow = null;
 
@@ -130,12 +144,14 @@
                 if(slideshow) return;
 
                 slideshow = setInterval(() => {
-                    img.style.opacity = "0";
-                    setTimeout(() => {
-                        index = (index + 1)%images.length;
-                        img.src = images[index];
-                        img.style.opacity = "1";
-                    }, 200);
+                    const nextIndex = (index + 1) % images.length;
+                    back.src = images[nextIndex];
+                    back.onload = () => {
+                        front.classList.remove("active");
+                        back.classList.add("active");
+                        [front, back] = [back, front];
+                        index = nextIndex;
+                    };
                 }, 1500);
             });
 
@@ -143,19 +159,17 @@
                 clearInterval(slideshow);
                 slideshow = null;
                 index = 0;
-                img.style.opacity = "0";
-
-                setTimeout(() => {
-                    img.src = images[0];
-                    img.style.opacity = "1";
-                }, 200);
+                back.src = images[0];
+                front.classList.remove("active");
+                back.classList.add("active");
+                [front, back] = [back, front];
             });
         }
 
-        setupTileSlideshow("robotcombat-tile", "robotcombat-image",categoryImgaes.robotcombat);
-        setupTileSlideshow("robotarm-tile", "robotarm-image",categoryImgaes.robotarm);
-        setupTileSlideshow("design-tile", "design-image",categoryImgaes.rdesign);
-        setupTileSlideshow("automation-tile", "automation-image",categoryImgaes.automation);
+        setupTileSlideshow("robotcombat-tile", categoryImages.robotcombat);
+        setupTileSlideshow("robotarm-tile", categoryImages.robotarm);
+        setupTileSlideshow("design-tile", categoryImages.design);
+        setupTileSlideshow("automation-tile", categoryImages.automation);
     </script>
 </body>
 </html>
