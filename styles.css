@@ -150,7 +150,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
     object-fit: cover;
 
-    transition: transform 0.4s ease, opacity 0.8s ease;
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .tile-image.active {
@@ -211,6 +211,12 @@ nav a:hover, .dropdown:hover .dropbtn {
     line-height: 1.4;
 }
 
+.expanded ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .tile:hover .expanded{
     opacity: 1;
     transform: translateY(0);
@@ -218,6 +224,10 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .tile:nth-child(even) {
     flex-direction: row-reverse;
+}
+
+.tile:nth-child(even) .expanded {
+    padding-left: 40px;
 }
 
 .project-page {
