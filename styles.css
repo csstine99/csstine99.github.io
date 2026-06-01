@@ -138,8 +138,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     width: 250px;
     flex-shrink: 0;
     overflow: hidden;
-    height: 100%;
-    min-height: 180px;
+    align-self: stretch;
 }
 
 .tile-image {
@@ -151,7 +150,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
     object-fit: cover;
 
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    transition: transform 0.4s ease, opacity 0.8s ease;
 }
 
 .tile-image.active {

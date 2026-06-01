@@ -145,13 +145,13 @@
 
                 slideshow = setInterval(() => {
                     const nextIndex = (index + 1) % images.length;
-                    back.src = images[nextIndex];
                     back.onload = () => {
                         front.classList.remove("active");
                         back.classList.add("active");
                         [front, back] = [back, front];
                         index = nextIndex;
                     };
+                    back.src = images[nextIndex];
                 }, 1500);
             });
 
