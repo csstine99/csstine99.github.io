@@ -28,8 +28,8 @@
     <main> 
         <h1 class = "projects-title">Some Text Here</h1>
         <div class="projects">
-            <a href="robotcombat" class="tile">
-                <img>
+            <a href="robotcombat" class="tile" id="robotcombat-tile">
+                <img id="robotcombat-image" src="images/robot_combat/bissan_bersa/shell-removed-rotated.png">
                 <div class="tile-text">
                     <h2>Combat Robotics</h2>
                     <p class="description">Description of combat robotics here</p>
@@ -37,33 +37,118 @@
                 <p class="expanded">Here is a list of the projects in this section</p>
             </a>
 
-            <a href="robotarm" class="tile">
-                <img>
+            <a href="robotarm" class="tile" id="robotarm-tile">
+                <img id="robotarm-image" src="images/robot_arm/position/hero.png">
                 <div class="tile-text">
                     <h2>Robotic Arms</h2>
                     <p class="description">Description of robotic arms here</p>
                 </div>
-                <p class="expanded">Here is a list of the projects in this section</p>
+                <p class="expanded">
+                    <ul>
+                        <li>Position Holding Robotic Arm</li>
+                        <li>Disturbance Stabilizing Robotic Arm</li>
+                        <li>Physical Aimbot</li>
+                    </ul>
+                </p>
             </a>
 
-            <a href="design" class="tile">
-                <img>
+            <a href="design" class="tile" id="design-tile">
+                <img id="design-image" src="images/design/nix/model.png">
                 <div class="tile-text">
                     <h2>Product Design</h2>
                     <p class="description">Description of product design here</p>
                 </div>
-                <p class="expanded">Here is a list of the projects in this section</p>
+                <p class="expanded">
+                    <ul>
+                        <li>Smart E-Cigarette for Smoking Cessation</li>
+                        <li>Manual Shift Timing Indicator</li>
+                    </ul>
+                </p>
             </a>
 
-            <a href="automation" class="tile">
-                <img>
+            <a href="automation" class="tile" id="automation-tile">
+                <img id="automation-image" src="images/automation/printer.png">
                 <div class="tile-text">
                     <h2>Factory Automation</h2>
                     <p class="description">Description of factory automation</p>
                 </div>
-                <p class="expanded">Here is a list of the projects in this section</p>
+                <p class="expanded">
+                    <ul>
+                        <li>Cobot Palletizing</li>
+                        <li>3D Vision Bin Picking</li>
+                        <li>Automated Coil Labeling</li>
+                        <li>Wheel Bolt Hole Masking</li>
+                    </ul>
+                </p>
             </a>
         </div>
     </main>
+
+    <script>
+        const categoryImgaes = {
+            robotcombat: [
+                "images/robot_combat/bissan_bersa/hero.png",
+                "images/robot_combat/cassowari/cassowari.png",
+                "images/robot_combat/pushi/hero.png"
+            ],
+
+            robotarm: [
+                "images/robot_arm/position/hero.png",
+                "images/robot_arm/stabilizing/hero.png",
+                "images/robot_arm/aimi/hero.png"
+            ],
+
+            deisgn: [
+                "images/design/nix/model.png",
+                "images/design/shift_indicator/hero.png",
+                "images/design/misc/hero.png"
+            ],
+
+            automation: [
+                "images/automation/masking/hero.png",
+                "images/automation/labeler/hero.png",
+                "images/automation/bin_picking/hero.png",
+                "images/automation/palletizer/hero.png"
+            ]
+        }
+
+        function setupTileSlideshow(tileId, imageId, images) {
+            const tile = document.getElementById(tileId);
+            const img = document.getElementById(imageId);
+
+            let index = 0;
+            let slideshow = null;
+
+            tile.addEventListener("mouseenter", () => {
+                if(slideshow) return;
+
+                slideshow = setInterval(() => {
+                    img.style.opacity = "0";
+                    setTimeout(() => {
+                        index = (index + 1)%images.length;
+                        img.src = images[index];
+                        img.style.opacity = "1";
+                    }, 200);
+                }, 1500);
+            });
+
+            tile.addEventListener("mouseleave", () => {
+                clearInterval(slideshow);
+                slideshow = null;
+                index = 0;
+                img.style.opacity = "0";
+
+                setTimeout(() => {
+                    img.src = images[0];
+                    img.style.opacity = "1";
+                }, 200);
+            });
+        }
+
+        setupTileSlideshow("robotcombat-tile", "robotcombat-image",categoryImgaes.robotcombat);
+        setupTileSlideshow("robotarm-tile", "robotarm-image",categoryImgaes.robotarm);
+        setupTileSlideshow("design-tile", "design-image",categoryImgaes.rdesign);
+        setupTileSlideshow("automation-tile", "automation-image",categoryImgaes.automation);
+    </script>
 </body>
 </html>
