@@ -142,7 +142,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     min-height: 180px;
 }
 
-.tile-img {
+.tile-image {
     position: absolute;
     inset: 0;
 
@@ -164,7 +164,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     z-index: 1;
 }
 
-.tile:hover .tile.img.active {
+.tile:hover .tile-image.active {
     transform: scale(1.08);
 }
 
